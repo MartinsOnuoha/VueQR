@@ -1,0 +1,6 @@
+./server/env
+server/env/*
+server/__pycache__
+server/__pycache__/*
+client/node_modules
+./server/static/*
