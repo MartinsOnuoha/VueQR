@@ -1,0 +1,33 @@
+@import url('_font.scss');
+
+
+$primaryColor: #FF5678;
+$boxShadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+$lightBorder: 1px solid rgba(0, 0, 0, 0.1);
+
+::selection {
+  background-color: $primaryColor;
+  color: #FFF;
+}
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+}
+.shadow {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: $boxShadow;
+}
+.bordered {
+  border: $lightBorder;
+  &__bottom {
+    border-bottom: $lightBorder;
+  }
+}
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+}
+

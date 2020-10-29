@@ -5,11 +5,10 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pyqrcode
 from time import time
-from helpers import response
+from server.helpers import response, converter
 
 # configuration
 DEBUG = True
-
 
 # instantiate app
 app = Flask(__name__)
@@ -20,11 +19,16 @@ app.testing = True
 # enable CORS
 CORS(app, resources={ r'/*': { 'origins': '*' } })
 
+# handle 404
+@app.errorhandler(404)
+def page_not_found(errorCode):
+  return response.notFound()
+
 @app.route('/', methods=['GET'])
 def home():
   return response.success('Welcome to VueQR', request.host_url)
 
-@app.route('/generate', methods=['POST', 'GET'])
+@app.route('/generate', methods=['POST'])
 def generate():
   """
      @api {POST} /generate Generate QRCode
@@ -63,16 +67,23 @@ def generate():
       return response.error(422, 'provide a website url')
 
     img = pyqrcode.create(website_url)
+    # set path & name for image
     filename = time()
     hostname = request.host_url
     file_path = f'static/{filename}.png'
 
+    # generate png image
     img.png(file_path, scale= 10, module_color=code_color, background=bg_color)
 
-    return response.success('QRcode generated!', { 'url': f'{hostname}{file_path}' })
-  else:
-    return response.error(400, 'this route supports POST actions')
+    # convert to base64
+    converted_str = converter.img_to_base64(file_path)
 
+    return response.success('QRcode generated!', { 'path': f'{hostname}{file_path}', 'url': website_url, 'base64': converted_str })
+  else:
+    return response.error(405, 'this route supports POST actions')
+
+def create_app():
+  return app
 
 if __name__ == "__main__":
-  app.run()
+  app.run(debug=True)

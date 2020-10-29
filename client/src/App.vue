@@ -1,30 +1,24 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <Nav />
   <router-view/>
 </template>
 
+<script>
+import '@/assets/scss/_app.scss';
+import '@/assets/scss/_mobile.scss';
+import { Vue, Options } from 'vue-class-component';
+import Nav from './components/Nav/Nav.vue';
+
+@Options({
+  components: {
+    Nav,
+  },
+})
+
+export default class App extends Vue {
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+  #app {font-family: 'VT323', monospace;}
 </style>
