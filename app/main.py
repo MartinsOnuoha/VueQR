@@ -1,11 +1,11 @@
 import sys
-sys.path.insert(0, "./helpers/")
+sys.path.insert(0, "../helpers/")
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pyqrcode
 from time import time
-from server.helpers import response, converter
+from helpers import response, converter
 
 # configuration
 DEBUG = True

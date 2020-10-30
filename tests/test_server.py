@@ -1,8 +1,9 @@
 import sys
-sys.path.insert(0, "./helpers/")
+sys.path.insert(0, "../helpers/")
+# sys.path.insert(1, "../app/")
 
 import pytest
-from ..app import create_app
+from app.main import create_app
 
 @pytest.fixture
 def app():

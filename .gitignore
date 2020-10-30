@@ -1,6 +1,4 @@
-./server/env
-server/env/*
-server/__pycache__
-server/__pycache__/*
-client/node_modules
-./server/static/*
+__pycache__
+./__pycache__/*
+__pycache__/*
+.pytest_cache
