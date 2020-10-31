@@ -4,3 +4,5 @@ server/__pycache__
 server/__pycache__/*
 client/node_modules
 ./server/static/*
+./client/.firebase/*
+./client/.firebase/
