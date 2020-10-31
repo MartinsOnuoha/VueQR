@@ -4,8 +4,10 @@ $bp-iphone6: 360px;
 $bp-iphone6-plus: 414px;
 $bp-iphone7: 375px;
 $bp-iphoneX__height: 812px;
+$min-width: 200px;
+$max-width: 529px;
 
-@media (min-width: $galaxy-fold) and (max-width: $bp-iphone6-plus) {
+@media (min-width: $min-width) and (max-width: $max-width) {
   #app {
     .home {
       &__left {
