@@ -7,9 +7,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: Home,
   },
+  { path: '/:pathMatch(.*)*', name: 'not-found', redirect: '/' },
   {
     path: '/my-urls',
-    name: 'About',
+    name: 'MyUrls',
     component: () => import('../views/MyUrls.vue'),
   },
 ];

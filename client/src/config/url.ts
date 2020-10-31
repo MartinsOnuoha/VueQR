@@ -1,4 +1,4 @@
-const serverUrl = 'http://127.0.0.1:5000';
+const serverUrl: string = process.env.VUE_APP_API_URL;
 
 export default {
   serverUrl,

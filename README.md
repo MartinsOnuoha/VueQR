@@ -1,9 +1,10 @@
 # 🔗 Gen.X
 
 > Web tool for generating unique QR Codes for your URLS 🔗 🚀
-![mainimage](https://raw.githubusercontent.com/MartinsOnuoha/VueQR/master/client/public/img/1.png)
+>
+> It's a URL shortener, only this time you get a QRCode Image instead of a shorter URL 😅
 
-![mainimage](https://raw.githubusercontent.com/MartinsOnuoha/VueQR/master/client/public/img/3.png)
+![mainimage](https://raw.githubusercontent.com/MartinsOnuoha/VueQR/master/client/public/img/1.png)
 
 ## 🛠 Technologies
 
@@ -11,3 +12,12 @@
 - Flask
 - Typescript
 - Vue
+
+## 🍕 Features
+
+- Generate Unique QR Code from URLs
+- Select Colors for QR Code
+- Download Generated QR Code
+- View history of Created Codes and URL
+
+![mainimage](https://raw.githubusercontent.com/MartinsOnuoha/VueQR/master/client/public/img/3.png)
