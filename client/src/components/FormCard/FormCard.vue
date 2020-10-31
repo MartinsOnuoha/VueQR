@@ -35,7 +35,7 @@ import { Vue, Options } from 'vue-class-component';
   data() {
     return {
       colors: ['#FFA726', '#26C6DA', '#7E57C2', '#66BB6A', '#FF5678'],
-      url: 'www.genx.app',
+      url: 'www.genxqrcode.web.app',
       codeColor: '#000000',
       generatedUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAABrElEQVR4nO3aS66DMAwFUEssgCWxdZbEApD8Gn+BZtAndXKr60EL5DCKE5yA6L9iF3p6enp6evoveYlYVLZj0bxmp9m20eN6O9FjAD3FjnRf86gJPagf3T5Swbr+ddkS4KxrC/1v+FdYFoybMh/of8ibCiof5AM9hLe/o57XRfvxTQ/sIwLcfrKNHtd3GMiTM1QHPajvAT6UrHltRLTSA/v3BIibNKZyemDv3b5LrqdUq9ReT5/oPeghfRTYQ+0SS6lWlhn3/KGH8vGUPmrZlEM94njmDz2UV/WndObDdaiLNzznf3ogL5dY+84lUmGfzv/0QN53ucZx73yJxM71JB/okfyFViqIZD7I234mPZa/rp36yZ2Tut9OD+y3LLUzC6Qqb53N5/RgvgqwrU/FZnbJ10/0wF5jqEestxqt97DpIX1HUBvluQsyXX/RA/ns+Ho3nJVZj3xvocf01tm+rZULZL9py9ZnPUYP5ft94rFci+6az+l/yXsCdBU229+mx/RSC+RaY03qc3oob382n+dX0vnlpfo1emQf8VA3So/rPw56enp6enr6L/g/VwbX7IAzwZ4AAAAASUVORK5CYII=',
       loading: false,
@@ -48,7 +48,7 @@ import { Vue, Options } from 'vue-class-component';
       const { codeColor } = this;
 
       if (!url) {
-        url = 'www.genx.app';
+        url = 'www.genxqrcode.web.app';
       }
       this.$store.dispatch('generateCode', { url, bgColor: '#FFFFFF', codeColor }).then((response: string) => {
         this.generatedUrl = `data:image/png;base64,${response}`;

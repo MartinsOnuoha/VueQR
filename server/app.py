@@ -64,7 +64,7 @@ def generate():
     code_color = request_payload.get('codeColor') or '#000000'
 
     if not website_url:
-      return response.error(422, 'provide a website url')
+      return response.error(400, 'provide a website url')
 
     img = pyqrcode.create(website_url)
     # set path & name for image

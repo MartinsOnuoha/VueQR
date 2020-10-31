@@ -17,7 +17,7 @@
         </router-link>
       </li>
       <li class="nav__menu-item">
-        <a target="_blank" href="https://webqr.com/" class="nav-link">
+        <a target="_blank" href="https://genxscanner.web.app" class="nav-link">
           <i class="material-icons">open_in_new</i>Scan Code
         </a>
       </li>
