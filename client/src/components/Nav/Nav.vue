@@ -1,7 +1,7 @@
 <template>
   <nav class="nav bordered__bottom">
     <div class="nav__logo">
-      <img width="30" src="/img/code.png">
+      <img width="30" src="/img/fav.png">
       <router-link to="/">Gen.X</router-link>
     </div>
     <ul class="nav__menu">

@@ -1,10 +1,11 @@
+$galaxy-fold: 280px;
 $bp-iphone5: 320px;
 $bp-iphone6: 360px;
 $bp-iphone6-plus: 414px;
 $bp-iphone7: 375px;
 $bp-iphoneX__height: 812px;
 
-@media (min-width: $bp-iphone5) and (max-width: $bp-iphone6-plus) {
+@media (min-width: $galaxy-fold) and (max-width: $bp-iphone6-plus) {
   #app {
     .home {
       &__left {
@@ -12,12 +13,25 @@ $bp-iphoneX__height: 812px;
       }
     }
     .nav {
+      &__logo {
+        a {
+          display: none;
+        }
+        img {
+          width: 50px;
+        }
+      }
       &__menu {
         padding-right: 0;
         margin-right: 5px;
         &-item {
           padding: 0;
+          padding-right: 8px;
+          i {
+            display: none;
+          }
         }
+        padding-inline-start: 0px !important;
       }
     }
     .myUrls {
