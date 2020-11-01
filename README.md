@@ -4,6 +4,8 @@
 >
 > It's a URL shortener, only this time you get a QRCode Image instead of a shorter URL 😅
 
+[Check it out Here](https://genxqrcode.web.app/) 🚀
+
 ![mainimage](https://raw.githubusercontent.com/MartinsOnuoha/VueQR/master/client/public/img/1.png)
 
 ## 🛠 Technologies
